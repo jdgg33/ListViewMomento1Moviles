@@ -25,6 +25,10 @@ public class ListViewAdapter extends BaseAdapter {
         this.model = model;
     }
 
+    public ListViewAdapter(ArrayList<StudentModel> list, Context applicationContext) {
+
+    }
+
     @Override
     public int getCount() {
         return modelArrayList.size();

@@ -27,6 +27,14 @@ public class NotaOperations {
         helper = new SQLHelper(context, BDName, null, VERSION);
     }
 
+    public static ArrayList<StudentModel> selectAll() {
+            return null;
+    }
+
+    public static void close() {
+
+    }
+
     public void openRead() {
         database = helper.getReadableDatabase();
     }
@@ -155,5 +163,9 @@ public class NotaOperations {
         } catch (Exception e) {
             return -1;
         }
+    }
+
+    public int insertModel(StudentModel model) {
+            return 0;
     }
 }

@@ -28,15 +28,16 @@ public class MainActivity extends AppCompatActivity {
     private StudentModel model;
     private NotaOperations operations;
     private TextView uno;
-    private ArrayList<String> list;
+    private ArrayList<StudentModel> list;
 
 
     private FloatingActionButton fab_main_nuevo;
     private ListView lv_main_contactos;
-    private NotaOperations contactoOperations;
-    private ArrayList<StudentModel> list;
+    private NotaOperations NotaOperation;
+
     private ListViewAdapter adapter;
     private Object NotaOperations;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         lv_main_contactos = findViewById(R.id.lv_main_contactos);
         NotaOperations = new NotaOperations(getApplicationContext());
 
-        list = contactoOperations.selectAll();
-        contactoOperations.close();
+        list = ((com.example.listviewmomento1.operations.NotaOperations) NotaOperations).selectAll();
+        ((com.example.listviewmomento1.operations.NotaOperations) NotaOperations).close();
 
         adapter = new ListViewAdapter (list, getApplicationContext());
 
@@ -139,74 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
             tv_detalle_informacion = findViewById(R.id.tv_detalle_informacion);
 
-            ContactoModel result = (ContactoModel) getIntent().getSerializableExtra("item");
-
-            String nombreMostrar ="Nombre: " +result.get_nombre();
-            String estadoMostrar = "Estado: " + result.get_estado();
-            String mensajeMostrar = "Mensaje: " + result.get_mensaje();
-
-            tv_detalle_informacion.setText("Detalle: \n\n" + nombreMostrar + "\n" +estadoMostrar
-                    + "\n" +mensajeMostrar);
-
-            FloatingActionButton fab = findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-        }
-
-    }
-
-    public static class DetalleActivity extends AppCompatActivity {
-
-        TextView tv_detalle_informacion;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_detalle);
-            Toolbar toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-
-            tv_detalle_informacion = findViewById(R.id.tv_detalle_informacion);
-
-            ContactoModel result = (ContactoModel) getIntent().getSerializableExtra("item");
-
-            String nombreMostrar ="Nombre: " +result.get_nombre();
-            String estadoMostrar = "Estado: " + result.get_estado();
-            String mensajeMostrar = "Mensaje: " + result.get_mensaje();
-
-            tv_detalle_informacion.setText("Detalle: \n\n" + nombreMostrar + "\n" +estadoMostrar
-                    + "\n" +mensajeMostrar);
-
-            FloatingActionButton fab = findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-        }
-
-    }
-
-    public static class DetalleActivity extends AppCompatActivity {
-
-        TextView tv_detalle_informacion;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_detalle);
-            Toolbar toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-
-            tv_detalle_informacion = findViewById(R.id.tv_detalle_informacion);
-
             StudentModel result = (StudentModel) getIntent().getSerializableExtra("item");
 
             String nombreMostrar ="Nombre: " +result.get_nombre();
@@ -214,8 +147,8 @@ public class MainActivity extends AppCompatActivity {
             String notaMostrar = "Nota: " + result.get_nota();
             String mensajeMostrar = "Mensaje: " + result.get_mensaje();
 
-            tv_detalle_informacion.setText("Detalle: \n\n" + nombreMostrar + "\n" +estadoMostrar
-                    + "\n" +mensajeMostrar + "\n" +mensajeMostrar);
+            tv_detalle_informacion.setText("Detalle: \n\n" + nombreMostrar + "\n" +trabajoMostrar
+                    + "\n" +notaMostrar + "\n" +mensajeMostrar);
 
             FloatingActionButton fab = findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -228,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
     
-}
