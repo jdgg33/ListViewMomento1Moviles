@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ListViewMomento1</string>
+    <string name="aqu_va_el_nombre_del_trabajo">Aquí va el nombre del trabajo</string>
+    <string name="aqu_va_la_nota">Aquí va la nota</string>
+    <string name="aqu_va_el_mensaje">Aquí va el mensaje</string>
+    <string name="aqu_va_el_nombre_del_estudiante">Aquí va el nombre del estudiante</string>
+    <string name="aqu_va_a_estar_el_detalle_del_contacto_que_seleccionaron">Aquí va a estar el detalle del contacto que seleccionaron</string>
+    <string name="nombre">nombre</string>
+    <string name="trabajo">trabajo</string>
+    <string name="nota">nota</string>
+    <string name="mensaje">mensaje</string>
+    <string name="todo">TODO</string>
+    <string name="guardar">Guardar</string>
 </resources>

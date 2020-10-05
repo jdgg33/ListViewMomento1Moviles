@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:weightSum="1"
-    >
+    android:baselineAligned="false">
 
     <LinearLayout
         android:layout_width="70dp"
@@ -19,7 +19,8 @@
             android:id="@+id/iv_listviewmomento1"
             android:layout_width="102dp"
             android:layout_height="112dp"
-            app:srcCompat="@android:drawable/checkbox_on_background" />
+            app:srcCompat="@android:drawable/checkbox_on_background"
+            android:contentDescription="@string/todo" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,28 +36,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:text="nombre" />
+            android:text="@string/nombre" />
 
         <TextView
             android:id="@+id/tv_listviewmomento1_trabajo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:text="trabajo" />
+            android:text="@string/trabajo" />
 
         <TextView
             android:id="@+id/tv_listviewmomento1_nota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="nota" />
+            android:text="@string/nota" />
 
         <TextView
             android:id="@+id/tv_listviewmomento1_mensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="mensaje" />
+            android:text="@string/mensaje" />
+
+        <Button
+            android:id="@+id/btn_registro_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Guardar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_registro_mensaje" />
+
     </LinearLayout>
 
 </LinearLayout>

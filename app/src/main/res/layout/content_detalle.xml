@@ -12,7 +12,7 @@
         android:id="@+id/tv_detalle_informacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aquí va a estar el detalle del contacto que seleccionaron"
+        android:text="@string/aqu_va_a_estar_el_detalle_del_contacto_que_seleccionaron"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

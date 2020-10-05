@@ -13,7 +13,7 @@
     android:textSize="24sp"
     android:textColor="@android:color/holo_blue_dark"
     android:textStyle="bold|italic"
-    android:text="Aquí va el nombre" />
+    android:text="@string/aqu_va_el_nombre_del_estudiante" />
 
     <TextView
         android:id="@+id/tv_item_main_lista_trabajo"
@@ -22,7 +22,7 @@
         android:textSize="24sp"
         android:textColor="@android:color/holo_blue_dark"
         android:textStyle="bold|italic"
-        android:text="Aquí va el nombre del trabajo" />
+        android:text="@string/aqu_va_el_nombre_del_trabajo" />
 
     <TextView
         android:id="@+id/tv_item_main_lista_nota"
@@ -31,7 +31,7 @@
         android:textSize="24sp"
         android:textColor="@android:color/holo_blue_dark"
         android:textStyle="bold|italic"
-        android:text="Aquí va la nota" />
+        android:text="@string/aqu_va_la_nota" />
 
     <TextView
         android:id="@+id/tv_item_main_lista_mensaje"
@@ -40,5 +40,5 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:text="Aquí va el mensaje" />
+        android:text="@string/aqu_va_el_mensaje" />
 </LinearLayout>

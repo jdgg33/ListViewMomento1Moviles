@@ -51,15 +51,15 @@ public class ListViewAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater layaoutInflater = LayoutInflater.from(this.context);
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            itemView = inflater.inflate(R.layout.listviewmomento1, parent, false);
-            convertView = layaoutInflater.inflate(R.layout.listviewmomento1, parent, false);
+            itemView = inflater.inflate(R.layout.item_main_lista, parent, false);
+            convertView = layaoutInflater.inflate(R.layout.item_main_lista, parent, false);
         }
 
         TextView tv_listviewmomento1_nombre, tv_listviewmomento1_trabajo, tv_listviewmomento1_nota, tv_listviewmomento1_mensaje;
-        tv_listviewmomento1_nombre = itemView.findViewById(R.id.tv_listviewmomento1_nombre);
-        tv_listviewmomento1_trabajo = itemView.findViewById(R.id.tv_listviewmomento1_trabajo);
-        tv_listviewmomento1_nota = itemView.findViewById(R.id.tv_listviewmomento1_nota);
-        tv_listviewmomento1_mensaje = itemView.findViewById(R.id.tv_listviewmomento1_mensaje);
+        tv_listviewmomento1_nombre = itemView.findViewById(R.id.tv_item_main_lista_nombre);
+        tv_listviewmomento1_trabajo = itemView.findViewById(R.id.tv_item_main_lista_trabajo);
+        tv_listviewmomento1_nota = itemView.findViewById(R.id.tv_item_main_lista_nota);
+        tv_listviewmomento1_mensaje = itemView.findViewById(R.id.tv_item_main_lista_mensaje);
 
         model = modelArrayList.get(position);
 
