@@ -1,46 +1,65 @@
 package com.example.listviewmomento1.models;
 
-public class StudentModel {
+import java.io.Serializable;
+
+public class StudentModel implements Serializable {
 
     private int _id;
-    private String nombre;
-    private String trabajo;
-    private String nota;
-    private String mensaje;
-    private boolean activo;
+    private String _nombre;
+    private String _trabajo;
+    private String _nota;
+    private String _mensaje;
+    private boolean _activo;
+
+
+    public StudentModel(String _nombre, String _trabajo, String _nota, String _mensaje) {
+        this._nombre = _nombre;
+        this._trabajo = _trabajo;
+        this._nota = _nota;
+        this._mensaje = _mensaje;
+
+    }
+
+    public StudentModel(int _id, String _nombre, String _trabajo, String _nota, String _mensaje) {
+
+        this._id = _id;
+        this._nombre = _nombre;
+        this._trabajo = _trabajo;
+        this._nota = _nota;
+        this._mensaje = _mensaje;
+    }
+
+    public StudentModel(int _id, String _nombre, String _trabajo, String _nota, String _mensaje, boolean _activo) {
+
+        this._id = _id;
+        this._nombre = _nombre;
+        this._trabajo = _trabajo;
+        this._nota = _nota;
+        this._mensaje = _mensaje;
+        this._activo = _activo;
+    }
+
+    public StudentModel(String trabajo, String nota, String mensaje) {
+        this._nombre = _nombre;
+        this._trabajo = _trabajo;
+        this._nota = _nota;
+        this._mensaje = _mensaje;
+    }
 
     public StudentModel() {
+        this._activo = true;
     }
 
-    public StudentModel(String nombre, String trabajo, String nota, String mensaje, boolean activo) {
-        this.nombre = nombre;
-        this.trabajo = trabajo;
-        this.nota = nota;
-        this.mensaje = mensaje;
-        this.activo = activo;
-    }
 
-    public StudentModel(int _id, String nombre, String trabajo, String nota, String mensaje, boolean activo) {
-        this._id = _id;
-        this.nombre = nombre;
-        this.trabajo = trabajo;
-        this.nota = nota;
-        this.mensaje = mensaje;
-        this.activo = activo;
-    }
-
-    public StudentModel(String nombre, String trabajo, String nota, String mensaje) {
-    }
 
     @Override
     public String toString() {
         return "StudentModel{" +
                 "_id=" + _id +
-                ", nombre='" + nombre + '\'' +
-                ", trabajo='" + trabajo + '\'' +
-                ", nota='" + nota + '\'' +
-                ", mensaje='" + mensaje + '\'' +
-                ", activo=" + activo +
+                ", nombre='" + _nombre + '\'' +
+                ", trabajo='" + _trabajo + '\'' +
+                ", nota='" + _nota + '\'' +
+                ", mensaje='" + _mensaje + '\'' +
                 '}';
     }
 
@@ -52,43 +71,43 @@ public class StudentModel {
         this._id = _id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String get_nombre() {
+        return _nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void set_nombre(String _nombre) {
+        this._nombre = _nombre;
     }
 
-    public String getTrabajo() {
-        return trabajo;
+    public String get_trabajo() {
+        return _trabajo;
     }
 
-    public void setTrabajo(String trabajo) {
-        this.trabajo = trabajo;
+    public void set_trabajo(String _trabajo) {
+        this._trabajo = _trabajo;
     }
 
-    public String getNota() {
-        return nota;
+    public String get_nota() {
+        return _nota;
     }
 
-    public void setNota(String nota) {
-        this.nota = nota;
+    public void set_nota(String _nota) {
+        this._nota = _nota;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public String get_mensaje() {
+        return _mensaje;
     }
 
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
+    public void set_mensaje(String _mensaje) {
+        this._mensaje = _mensaje;
     }
 
-    public boolean isActivo() {
-        return activo;
+    public boolean is_activo() {
+        return _activo;
     }
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
+    public void set_activo(boolean _activo) {
+        this._activo = _activo;
     }
 }

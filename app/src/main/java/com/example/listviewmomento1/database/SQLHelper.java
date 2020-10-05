@@ -14,7 +14,13 @@ public class SQLHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(
-                "CREATE TABLE Notas (id integer primary key autoincrement, nombre text, trabajo text, nota int, mensaje text);");
+                "CREATE TABLE Notas (" +
+                        "id integer primary key autoincrement, " +
+                        "nombre text, " +
+                        "trabajo text, " +
+                        "nota int, " +
+                        "mensaje text" +
+                        ");");
     }
 
     @Override
