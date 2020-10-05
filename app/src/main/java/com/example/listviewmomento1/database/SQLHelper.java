@@ -18,14 +18,14 @@ public class SQLHelper extends SQLiteOpenHelper {
                         "id integer primary key autoincrement, " +
                         "nombre text, " +
                         "trabajo text, " +
-                        "nota int, " +
+                        "nota text, " +
                         "mensaje text" +
                         ");");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS nota");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Nota");
         onCreate(sqLiteDatabase);
     }
 }
